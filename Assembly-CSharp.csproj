@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Button_default.cs" />
      <Compile Include="Assets\followBoat.cs" />
      <Compile Include="Assets\hitrocks.cs" />
      <Compile Include="Assets\Scripts\BoatController.cs" />

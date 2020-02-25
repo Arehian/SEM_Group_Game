@@ -650,11 +650,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a03b27d5876744d73814c493277248a6, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookAt: {fileID: 308383619}
-  camTransform: {fileID: 534669905}
 --- !u!1 &739392699 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100028, guid: 81f3769ab2b82604aad39f57de409e99,
@@ -892,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831794645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.85, y: -0.16000004, z: -1.5020001}
+  m_LocalPosition: {x: 1.85, y: -0.16000004, z: -0.71}
   m_LocalScale: {x: 0.049096, y: 0.049096, z: 0.049096}
   m_Children: []
   m_Father: {fileID: 1390282860}
