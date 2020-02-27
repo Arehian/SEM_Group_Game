@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 // [RequireComponent (typeof(FloatObjectScript))]
 public class BoatController : MonoBehaviour
@@ -9,10 +11,17 @@ public class BoatController : MonoBehaviour
     // public float speed = 0.5f;
     public Vector3 point;
     public Transform boat_transform;
+
+    public HP_Controller other;
+
     // [Space (15)]
     public float speed = 1.0f;
     public float steerSpeed = 1.0f;
     public float movementThreshold = 5.0f;
+
+
+    public bool hit_once = true;
+
 
     float verticalInput;
     float horizontalInput;
@@ -23,6 +32,8 @@ public class BoatController : MonoBehaviour
     {
         Rigidbody r = GetComponent<Rigidbody>();
         r.velocity = transform.forward * speed;
+
+
     }
 
     // Update is called once per frame
@@ -72,5 +83,30 @@ public class BoatController : MonoBehaviour
       // }
 
     }
+    void OnTriggerEnter(Collider other){
 
+             Debug.Log ("1111");
+
+
+
+    }
+    void OnCollisionEnter(Collision collision) {
+        if(other.Slider.value>0){
+            other.HP_decrease();
+            hit_once = false;
+
+        }else{
+            SceneManager    .LoadScene("StartMenu");
+        }
+
+    }
+
+    void OnCollisionExit(Collision collision) {
+       // TimeCount = DateTime.Now - TimeNow;
+        //if(TimeCount >= 5){
+            hit_once = true;
+           // MyTimer.Stop(); //停止计时
+        //}
+
+    }
 }
