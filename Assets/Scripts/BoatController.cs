@@ -91,12 +91,12 @@ public class BoatController : MonoBehaviour
 
     }
     void OnCollisionEnter(Collision collision) {
-        if(other.Slider.value>0){
+        if(other.Slider.value>20){
             other.HP_decrease();
             hit_once = false;
 
         }else{
-            SceneManager    .LoadScene("StartMenu");
+            SceneManager.LoadScene("GameOver");
         }
 
     }
