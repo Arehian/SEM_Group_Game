@@ -3,10 +3,22 @@ sceneSetups:
 - path: Assets/GameOver.unity
 =======
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+- path: Assets/TreasureHuntScene.unity
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 - path: Assets/Scenes/SampleScene.unity
 =======
 - path: Assets/GameOver.unity
 >>>>>>> b27191a54fe6e41fc838980b8301386bd856cf20
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> develop
+>>>>>>> 02c3b1d8bb6d0f0892bfb41363556621096c975c
 >>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
