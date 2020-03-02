@@ -8,8 +8,9 @@ public class HP_Controller : MonoBehaviour
 {
     public Slider Slider;
     static public int ScoreInt;
-    static private int scoreInt;
+    static private int scoreInt = 0;
     public static Text txt;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,10 @@ public class HP_Controller : MonoBehaviour
        Button btn   = (Button) btnObj.GetComponent<Button>();
        Button btn_d = (Button) btnObj_d.GetComponent<Button>();
        Slider.value = 100;
-       btn.onClick.AddListener(HP_increase());
-       btn_d.onClick.AddListener(HP_decrease());
+       txt = GameObject.Find("Score").GetComponent<Text>();
+       txt.text = " 0 ";
+       btn.onClick.AddListener(HP_increase);
+       btn_d.onClick.AddListener(HP_decrease);
     }
 
    // Update is called once per frame
