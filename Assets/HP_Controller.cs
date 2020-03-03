@@ -22,8 +22,8 @@ public class HP_Controller : MonoBehaviour
        Slider.value = 100;
        txt = GameObject.Find("Score").GetComponent<Text>();
        txt.text = " 0 ";
-       btn.onClick.AddListener(HP_increase);
-       btn_d.onClick.AddListener(HP_decrease);
+       //btn.onClick.AddListener(Score_increase);
+       //btn_d.onClick.AddListener(Score_decrease);
     }
 
    // Update is called once per frame
@@ -33,12 +33,18 @@ public class HP_Controller : MonoBehaviour
    }
 
    public void HP_decrease(){
-        txt = GameObject.Find("Score").GetComponent<Text>();
-        scoreInt -= 10;
-        txt.text = scoreInt.ToString();
-
+        Slider.value -= 20;
    }
    public void HP_increase(){
+        Slider.value += 20;
+   }
+   public void Score_decrease(){
+           txt = GameObject.Find("Score").GetComponent<Text>();
+           scoreInt -= 10;
+           txt.text = scoreInt.ToString();
+
+   }
+   public void Score_increase(){
         txt = GameObject.Find("Score").GetComponent<Text>();
         scoreInt += 10;
         txt.text = scoreInt.ToString();
