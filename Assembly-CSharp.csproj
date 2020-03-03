@@ -57,7 +57,11 @@
      <Compile Include="Assets\followBoat.cs" />
      <Compile Include="Assets\hitrocks.cs" />
      <Compile Include="Assets\HP_Controller.cs" />
+     <Compile Include="Assets\InnerDriveStudios\SkullChest\Scripts\CameraDolly.cs" />
+     <Compile Include="Assets\InnerDriveStudios\SkullChest\Scripts\MaterialControlPanel.cs" />
+     <Compile Include="Assets\InnerDriveStudios\SkullChest\Scripts\SkullChest.cs" />
      <Compile Include="Assets\Quit.cs" />
+     <Compile Include="Assets\Random_Create.cs" />
      <Compile Include="Assets\Scripts\BoatController.cs" />
      <Compile Include="Assets\Scripts\BoatFloater.cs" />
      <Compile Include="Assets\Scripts\CameraFollower.cs" />
