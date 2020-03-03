@@ -289,20 +289,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 837963832}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &147737479
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147737475}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +556,7 @@ MonoBehaviour:
   point: {x: 0, y: -20, z: 0}
   boat_transform: {fileID: 0}
   other: {fileID: 69901334}
+  treasure: {fileID: 1128558251}
   speed: 0.5
   steerSpeed: 5
   movementThreshold: 40
@@ -1325,6 +1312,11 @@ PrefabInstance:
     - target: {fileID: 4139971034111284, guid: 41c549aad170b5e459138bcb04c7109c, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65087598370734752, guid: 41c549aad170b5e459138bcb04c7109c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41c549aad170b5e459138bcb04c7109c, type: 3}
@@ -2183,6 +2175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: {fileID: 147737475}
+  Treasure_now: {fileID: 0}
+  if_create: 1
 --- !u!1 &1133220179 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100064, guid: 81f3769ab2b82604aad39f57de409e99,
