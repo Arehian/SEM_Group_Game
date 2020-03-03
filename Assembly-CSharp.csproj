@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Button_default.cs" />
+     <Compile Include="Assets\EnemyController.cs" />
      <Compile Include="Assets\followBoat.cs" />
      <Compile Include="Assets\hitrocks.cs" />
      <Compile Include="Assets\HP_Controller.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\CameraFollower.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\wave_controller.cs" />
+     <Compile Include="Assets\Waypoint.cs" />
      <None Include="Assets\Five Seamless Tileable Ground Textures\read me.txt" />
      <None Include="Assets\SkyBox\Rocks\readme.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
