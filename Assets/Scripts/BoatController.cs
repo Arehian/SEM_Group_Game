@@ -94,6 +94,8 @@ public class BoatController : MonoBehaviour
         if(other.Slider.value>20){
             other.HP_decrease();
             hit_once = false;
+            movementFactor = 0.0f;
+            steerFactor = 0.0f;
 
         }else{
             SceneManager.LoadScene("GameOver");
