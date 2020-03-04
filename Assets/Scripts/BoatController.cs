@@ -12,7 +12,8 @@ public class BoatController : MonoBehaviour
     public Vector3 point;
     public Transform boat_transform;
 
-    public HP_Controller other;
+    public HP_Controller other_HP;
+    public Random_Create treasure;
 
     // [Space (15)]
     public float speed = 1.0f;
@@ -83,16 +84,22 @@ public class BoatController : MonoBehaviour
       // }
 
     }
-    void OnTriggerEnter(Collider other){
+        void OnTriggerEnter(Collider other){
+        //get the treasure
+        //destroy the treasure and create new one
+        Destroy(treasure.Treasure_now);
+        //add Score
+        other_HP.Score_increase();
 
-             Debug.Log ("1111");
+        treasure.if_create = true;
+
 
 
 
     }
     void OnCollisionEnter(Collision collision) {
-        if(other.Slider.value>20){
-            other.HP_decrease();
+        if(other_HP .Slider.value>20){
+            other_HP.HP_decrease();
             hit_once = false;
             movementFactor = 0.0f;
             steerFactor = 0.0f;

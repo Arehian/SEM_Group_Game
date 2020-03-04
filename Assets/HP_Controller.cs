@@ -15,10 +15,10 @@ public class HP_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       GameObject btnObj = GameObject.Find ("Ocean/Boat/HP_Canvas/Add");
+      /* GameObject btnObj = GameObject.Find ("Ocean/Boat/HP_Canvas/Add");
        GameObject btnObj_d = GameObject.Find ("Ocean/Boat/HP_Canvas/De");
        Button btn   = (Button) btnObj.GetComponent<Button>();
-       Button btn_d = (Button) btnObj_d.GetComponent<Button>();
+       Button btn_d = (Button) btnObj_d.GetComponent<Button>();*/
        Slider.value = 100;
        txt = GameObject.Find("Score").GetComponent<Text>();
        txt.text = " 0 ";
