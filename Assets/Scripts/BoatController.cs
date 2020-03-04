@@ -87,7 +87,7 @@ public class BoatController : MonoBehaviour
         void OnTriggerEnter(Collider other){
         //get the treasure
         //destroy the treasure and create new one
-        Destroy(treasure.Treasure_now);
+            Destroy(treasure.Treasure_now);
         //add Score
         other_HP.Score_increase();
 
