@@ -28,6 +28,7 @@ public class BoatController : MonoBehaviour
     float horizontalInput;
     float steerFactor;
     float movementFactor;
+    float y = 0.0f;
 
     void Start()
     {
@@ -44,6 +45,25 @@ public class BoatController : MonoBehaviour
 
       Movement();
       Steer();
+     // MouseMove();
+    }
+
+    void MouseMove(){
+        float rotation = Input.GetAxis("Mouse X");
+        transform.Rotate(0, 1.0f * rotation, 0);
+        float updown = Input.GetAxis("Mouse Y");
+        // clamp allowed rotation to 30
+        if (y + updown > 0 || y + updown < -40)
+        {
+            updown = 0;
+        }
+        y += updown;
+        Camera.main.transform.RotateAround(transform.position,
+           transform.right,
+            updown);
+        Camera.main.transform.LookAt(transform);
+
+
     }
 
     void Balance(){
