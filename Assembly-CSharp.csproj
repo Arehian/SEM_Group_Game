@@ -53,22 +53,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Button_default.cs" />
-     <Compile Include="Assets\EnemyController.cs" />
-     <Compile Include="Assets\followBoat.cs" />
-     <Compile Include="Assets\hitrocks.cs" />
-     <Compile Include="Assets\HP_Controller.cs" />
      <Compile Include="Assets\InnerDriveStudios\SkullChest\Scripts\CameraDolly.cs" />
      <Compile Include="Assets\InnerDriveStudios\SkullChest\Scripts\MaterialControlPanel.cs" />
      <Compile Include="Assets\InnerDriveStudios\SkullChest\Scripts\SkullChest.cs" />
-     <Compile Include="Assets\Quit.cs" />
-     <Compile Include="Assets\Random_Create.cs" />
      <Compile Include="Assets\Scripts\BoatController.cs" />
      <Compile Include="Assets\Scripts\BoatFloater.cs" />
+     <Compile Include="Assets\Scripts\Button_default.cs" />
      <Compile Include="Assets\Scripts\CameraFollower.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\followBoat.cs" />
+     <Compile Include="Assets\Scripts\hitrocks.cs" />
+     <Compile Include="Assets\Scripts\HP_Controller.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Quit.cs" />
+     <Compile Include="Assets\Scripts\Random_Create.cs" />
      <Compile Include="Assets\Scripts\wave_controller.cs" />
-     <Compile Include="Assets\Waypoint.cs" />
+     <Compile Include="Assets\Scripts\Waypoint.cs" />
      <None Include="Assets\Five Seamless Tileable Ground Textures\read me.txt" />
      <None Include="Assets\SkyBox\Rocks\readme.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
