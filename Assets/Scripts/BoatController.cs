@@ -61,14 +61,14 @@ public class BoatController : MonoBehaviour
       verticalInput = Input.GetAxis("Vertical");
       movementFactor = Mathf.Lerp(movementFactor, verticalInput, Time.deltaTime / movementThreshold);
       transform.Translate(0.0f, 0.0f, movementFactor * speed);
-      Debug.Log(Input.GetAxis("Vertical"));
+      //sDebug.Log(Input.GetAxis("Vertical"));
     }
 
     void Steer(){
       horizontalInput = Input.GetAxis("Horizontal");
       steerFactor = Mathf.Lerp(steerFactor, horizontalInput, Time.deltaTime / movementThreshold);
       transform.Rotate(0.0f, steerFactor * steerSpeed, 0.0f);
-      Debug.Log(Input.GetAxis("Horizontal"));
+      //Debug.Log(Input.GetAxis("Horizontal"));
       // if(Input.GetKey("left")){
       //   // transform.RotateAround(point, Vector3.left, 20 * Time.deltaTime);
       //
@@ -84,10 +84,10 @@ public class BoatController : MonoBehaviour
       // }
 
     }
-        void OnTriggerEnter(Collider other){
+    void OnTriggerEnter(Collider other){
         //get the treasure
         //destroy the treasure and create new one
-            Destroy(treasure.Treasure_now);
+        Destroy(treasure.Treasure_now);
         //add Score
         other_HP.Score_increase();
 

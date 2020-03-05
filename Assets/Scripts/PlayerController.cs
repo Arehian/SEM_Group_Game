@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     }
     void OnTriggerEnter(Collider other){
 
-         Debug.Log ("1111");
+        // Debug.Log ("1111");
 
 
 

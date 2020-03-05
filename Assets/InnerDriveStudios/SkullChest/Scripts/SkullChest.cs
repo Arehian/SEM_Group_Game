@@ -8,6 +8,7 @@ public class ChestState {
 	public Vector3 angle;
 	public AudioClip sound;
 	public float speed;
+
 }
 
 public class SkullChest : MonoBehaviour
@@ -17,7 +18,7 @@ public class SkullChest : MonoBehaviour
 	private AudioSource audioSource;
 	[Tooltip("Allows you to limit the angle to the camera under which a mousedown is accepted. -1 is from everywhere, 0 is from 90 degrees to the side and upward, 0-1 is limited to a cone to the front.")]
 	public float acceptLeeway = 0;
-
+    public Random_Create treasure;
 	private void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
@@ -49,11 +50,22 @@ public class SkullChest : MonoBehaviour
 		ChestState state = targetAngles[0];
 		top.transform.localRotation = Quaternion.Slerp(top.transform.localRotation, Quaternion.Euler(state.angle), state.speed * 0.5f * Time.deltaTime);
     }
-    void OnOnTriggerEnter(){
-        //Debug.Log(32445);
+
+     void OnTriggerEnter(Collider other){
+            //get the treasure
+            //destroy the treasure and create new one
+
+            Destroy(treasure.Treasure_now);
+            //add Score
+            //other_HP.Score_increase();*/
+
+            treasure.if_create = true;
+
+            /*Debug.Log(32445);*/
 
 
-    }
+
+        }
 
 
 
