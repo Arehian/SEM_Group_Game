@@ -26,7 +26,7 @@ public class hitrocks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnCollisionEnter(Collision collision) {
          var name = collision.collider.name;

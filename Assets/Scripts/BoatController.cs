@@ -29,6 +29,19 @@ public class BoatController : MonoBehaviour
     float steerFactor;
     float movementFactor;
     float y = 0.0f;
+    public AudioSource music;
+    public AudioClip AC;
+
+
+    private void Awake()
+    {
+        //给对象添加一个AudioSource组件
+        music = gameObject.AddComponent<AudioSource>();
+        //设置不一开始就播放音效
+        music.playOnAwake = false;
+        //加载音效文件，我把跳跃的音频文件命名为jump
+        AC = Resources.Load<AudioClip>("Sounds/Hitrocks");
+    }
 
     void Start()
     {
@@ -118,6 +131,8 @@ public class BoatController : MonoBehaviour
 
     }
     void OnCollisionEnter(Collision collision) {
+        music.clip = AC;
+        music.Play();
         if(other_HP .Slider.value>20){
             other_HP.HP_decrease();
             hit_once = false;

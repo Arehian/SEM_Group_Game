@@ -16,7 +16,7 @@ public class Quit : MonoBehaviour
     {
         GetComponent<UnityEngine.UI.Button>().Select();
 
-        GameObject btnObj = GameObject.Find("Background/Canvas/Start");
+        GameObject btnObj = GameObject.Find("Background/Canvas/Quit");
 
         Button btn = (Button)btnObj.GetComponent<Button>();
 
