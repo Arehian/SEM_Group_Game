@@ -35,11 +35,10 @@ public class BoatController : MonoBehaviour
 
     private void Awake()
     {
-        //给对象添加一个AudioSource组件
         music = gameObject.AddComponent<AudioSource>();
-        //设置不一开始就播放音效
+
         music.playOnAwake = false;
-        //加载音效文件，我把跳跃的音频文件命名为jump
+
         AC = Resources.Load<AudioClip>("Sounds/Hitrocks");
     }
 
@@ -64,16 +63,6 @@ public class BoatController : MonoBehaviour
     void MouseMove(){
         float rotation = Input.GetAxis("Mouse X");
         transform.Rotate(0, 1.0f * rotation, 0);
-        /*float updown = Input.GetAxis("Mouse Y");
-        // clamp allowed rotation to 30
-        if (y + updown > 0 || y + updown < -40)
-        {
-            updown = 0;
-        }
-        y += updown;
-        Camera.main.transform.RotateAround(transform.position,
-           transform.right,
-            updown);*/
         Camera.main.transform.LookAt(transform);
 
 
@@ -94,27 +83,13 @@ public class BoatController : MonoBehaviour
       verticalInput = Input.GetAxis("Vertical");
       movementFactor = Mathf.Lerp(movementFactor, verticalInput, Time.deltaTime / movementThreshold);
       transform.Translate(0.0f, 0.0f, movementFactor * speed);
-      //sDebug.Log(Input.GetAxis("Vertical"));
+
     }
 
     void Steer(){
       horizontalInput = Input.GetAxis("Horizontal");
       steerFactor = Mathf.Lerp(steerFactor, horizontalInput, Time.deltaTime / movementThreshold);
       transform.Rotate(0.0f, steerFactor * steerSpeed, 0.0f);
-      //Debug.Log(Input.GetAxis("Horizontal"));
-      // if(Input.GetKey("left")){
-      //   // transform.RotateAround(point, Vector3.left, 20 * Time.deltaTime);
-      //
-      //   transform.RotateAround(boat_transform.position, Vector3.down, 20 * Time.deltaTime);
-      //   transform.position = transform.forward *speed;
-      //   boat_transform.position = point;
-      // }else if(Input.GetKey("right")){
-      //   transform.RotateAround(boat_transform.position, Vector3.up, 20 * Time.deltaTime);
-      //   transform.position = transform.forward * speed;
-      //   boat_transform.position = point;
-      //   // transform.RotateAround(point, Vector3.right, 20 * Time.deltaTime);
-      //   // transform.Rotate(0, -1, 0);
-      // }
 
     }
     void OnTriggerEnter(Collider other){
@@ -146,11 +121,8 @@ public class BoatController : MonoBehaviour
     }
 
     void OnCollisionExit(Collision collision) {
-       // TimeCount = DateTime.Now - TimeNow;
-        //if(TimeCount >= 5){
-            hit_once = true;
-           // MyTimer.Stop(); //停止计时
-        //}
+
+         hit_once = true;
 
     }
 }
